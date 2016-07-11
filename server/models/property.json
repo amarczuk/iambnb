@@ -1,0 +1,29 @@
+{
+  "name": "property",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "address": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bookings": {
+      "type": "hasMany",
+      "model": "booking",
+      "foreignKey": ""
+    },
+    "availability": {
+      "type": "hasMany",
+      "model": "availability",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "availability",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": {
+      "required": false
+    }
+  },
+  "properties": {
+    "start": {
+      "type": "date",
+      "required": true
+    },
+    "end": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "property": {
+      "type": "belongsTo",
+      "model": "property",
+      "foreignKey": "propertyId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
